@@ -1,0 +1,668 @@
+
+:root {
+    --light: white;
+    --dark: black;
+    --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font: "Montserrat" sans-serif;
+    --primary-color: #F81A2C;
+}
+body {
+    font-family: var(--font-default);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+  }
+
+  .popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+#card-slide .item {
+  background:white;
+  padding: 30px 0px;
+  margin: 5px;
+  color: #FFF;
+  border-radius: 3px;
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease-out;
+}
+
+#preloader img {
+  width: 80px;
+  height: 80px;
+  animation: animate-zoom 1.5s ease-in-out infinite;
+}
+
+@keyframes animate-zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+  /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+  .topbar {
+    background: var(--primary-color);
+    height: 30px;
+    font-size: 14px;
+    transition: all 0.5s;
+    color: #fff;
+    padding: 0;
+  }
+  
+  .topbar .contact-info i {
+    font-style: normal;
+    color: #fff;
+    line-height: 0;
+  }
+  
+  .topbar .contact-info i a,
+  .topbar .contact-info i span {
+    padding-left: 5px;
+    color: #fff;
+  }
+  
+  @media (max-width: 575px) {
+  
+    .topbar .contact-info i a,
+    .topbar .contact-info i span {
+      font-size: 13px;
+    }
+  }
+  
+  .topbar .contact-info i a {
+    line-height: 0;
+    transition: 0.3s;
+  }
+  
+  .topbar .contact-info i a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .topbar .social-links a {
+    color: var(--light);
+    line-height: 0;
+    transition: 0.3s;
+    margin-left: 20px;
+  }
+  
+  .topbar .social-links a:hover {
+    color: #fff;
+  }
+  
+  .header {
+    transition: all 0.5s;
+    /* z-index: 997; */
+    height: 100px;
+    background-color: var(--light);
+  }
+  
+  .header .logo img {
+    margin-right: 6px;
+  }
+
+ #header .offcanvas {
+    z-index: 1050;
+  }
+  
+
+  /*--------------------------------------------------------------
+  # Hero
+  --------------------------------------------------------------*/
+
+
+  #hero {
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+  }
+.hero {
+    background-color: black;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 35px !important;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    line-height: 50px;
+}
+
+.hero-text h1 span {
+  color: var(--primary-color);
+}
+
+.hero-text p {
+    line-height: 35px;
+}
+
+.hero-img {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 100%; 
+  }
+  
+
+.hero-img .hero-img1 {
+    position: relative;
+    z-index: 5;
+    width: 70%;
+    left: 30px;
+    
+
+}
+
+.hero-img .hero-img2 {
+    position: absolute;
+    top: 70px;
+    left:0;
+    right: 80px;
+}
+/* 
+.binance {
+  position: relative;
+  z-index: 100;
+  bottom: 70px;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+} */
+
+
+  
+
+  /*--------------------------------------------------------------
+  # Desktop Navigation
+  --------------------------------------------------------------*/
+
+  #navbar .navbar-nav .nav-item a{
+    font-size: 17px;
+    font-weight: 700;
+    color: black;
+    margin-right: 20px;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  #navbar .navbar-nav .nav-item a:hover{
+    color: red;
+
+  }
+
+    /*--------------------------------------------------------------
+  # Mobile Navigation
+  --------------------------------------------------------------*/
+  #header .offcanvas .navbar-nav .nav-item a{
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    margin-right: 20px;
+  }
+
+  #header .offcanvas .navbar-nav .nav-item a:hover{
+    color:#F81A2C
+  }
+  /*--------------------------------------------------------------
+  # Steps Section
+  --------------------------------------------------------------*/
+.get-started h2 {
+  color: var(--primary-color);
+}
+
+.step {
+ padding: 0px;
+}
+
+.divider-horizontal {
+  width: 10%;
+  margin: 0px;
+  padding: 0px;
+  z-index: 5;
+  top: 80px;
+  position: relative;
+}
+
+  /*--------------------------------------------------------------
+  # About
+  --------------------------------------------------------------*/
+.about-text p {
+  color: var(--primary-color);
+}
+
+.about-content {
+  background-color: var(--primary-color);
+}
+
+   /*--------------------------------------------------------------
+  # Cards we Trade
+  --------------------------------------------------------------*/
+.cards .amazon {
+  background-color: #FFBF5F;
+  padding: 55px 5px 20px 5px;
+}
+
+.cards .target {
+  background-color: #DEDEDE;
+  padding: 30px 5px;
+}
+
+
+.cards .razor {
+  background-image: linear-gradient(to right,#000000  , #666666);
+  padding: 30px 5px;
+}
+
+
+.cards .ebay {
+  padding: 40px 5px 20px 5px;
+  background-color: #DEDEDE;
+}
+
+
+.cards .google {
+  background-color: black;
+  padding: 30px 5px;
+}
+
+.cards .apple{
+  background-image: linear-gradient(to right,#B8B8B8  , #666666);
+  padding: 30px 5px;
+}
+
+.cards .sephora{
+  background-color: #000000;
+  padding: 30px 5px;
+}
+
+.cards .xbox{
+  background-color: #107C10;
+  padding: 30px 5px;
+}
+.cards .target .target-btn {
+  color: var(--primary-color);
+  margin-top: 50px;
+}
+
+.cards .amazon-btn{
+  margin-top: 90px;
+}
+
+.cards .ebay-btn {
+  margin-top: 95px;
+}
+
+
+.cards .razor-btn {
+  margin-top: 50px;
+}
+
+
+.cards .google-btn {
+  margin-top: 50px;
+}
+
+.cards .apple-btn {
+  margin-top: 50px;
+}
+
+.cards .sephora-btn {
+  margin-top: 50px;
+}
+
+.cards .xbox-btn  {
+  margin-top: 50px;
+}
+
+
+/* .cards  .target-btn,
+.cards  .amazon-btn,
+.cards .razor-btn,
+.cards .ebay-btn {
+  cursor: pointer;
+  animation: move 5s infinite linear;
+  transition: opacity 0.3s ease;
+}
+
+.cards  .target-btn:hover,
+.cards  .amazon-btn:hover,
+.cards .razor-btn:hover,
+.cards .ebay-btn:hover
+ {
+  animation-play-state: paused;
+  opacity: 0.7;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+} */
+
+
+   /*--------------------------------------------------------------
+  # Contact 
+  --------------------------------------------------------------*/
+
+
+
+  .contact .form{
+    padding: 30px;
+    border-radius: 30px;
+    border: none;
+   }
+
+  .contact {
+    background-color: #000000;
+  }
+
+  span .bi-whatsapp{
+    color: #1cc32a;
+   }
+
+  .contact-icons  .contact-btn1 {
+   font-family: Helvetica;
+    background-color:#25D366;
+    border: 1px white solid;
+    padding: 7px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .contact-icons  .contact-btn1 i{
+    color: white;
+    font-size: 35px;
+  }
+
+  .contact-icons .contact-btn1:hover{
+    background-color: #1cc32a;
+  }
+
+.contact-icons .contact-btn2 {
+    font-family: sans-serif;
+    background-image: linear-gradient(to right, #f9ce34, #ee2a7b, #6228d7);
+    border: none;
+    padding: 7px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.contact-icons .contact-btn2 i{
+  color: white;
+  font-size: 35px;
+}
+
+.contact-icons .contact-btn2:hover{
+  background-image: linear-gradient(to right, #6228d7, #ee2a7b, #f9ce34);;
+}
+
+@media (max-width: 575px) {
+  .contact-btn1,
+  .contact-btn2 {
+    font-size: 20px;
+    padding: 4px 10px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Scroll top button
+--------------------------------------------------------------*/
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 30px;
+  bottom: -15px;
+  z-index: 99999;
+  background: blue;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.scroll-top i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+
+.scroll-top:hover {
+  background: rgba(91, 88, 248, 0.8);
+  color: #fff;
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 15px;
+}
+
+/* ANIMATIONS */
+/* CSS File: assets/css/styles.css */
+
+/* Fade Up Animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 0.5s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade Down Animation */
+.fade-down {
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fadeDown 0.5s ease forwards;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade Animation */
+.fade {
+  opacity: 0;
+  animation: fade 0.5s ease forwards;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fade Left Animation */
+.fade-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeLeft 0.5s ease forwards;
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade Right Animation */
+.fade-right {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: fadeRight 0.5s ease forwards;
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide Left Animation */
+.slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideLeft 0.5s ease forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide Right Animation */
+.slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideRight 0.5s ease forwards;
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Zoom In Animation */
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.5);
+  animation: zoomIn 0.5s ease forwards;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Zoom Out Animation */
+.zoom-out {
+  opacity: 0;
+  transform: scale(1.5);
+  animation: zoomOut 0.5s ease forwards;
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Delay Classes */
+.delay-1 {
+  animation-delay: 0.2s;
+}
+
+.delay-2 {
+  animation-delay: 0.4s;
+}
+
+.delay-3 {
+  animation-delay: 0.6s;
+}
+
+.delay-4 {
+  animation-delay: 0.8s;
+}
+
+.delay-5 {
+  animation-delay: 1s;
+}
+
+
+.delay-5 {
+  animation-delay: 2s;
+}
